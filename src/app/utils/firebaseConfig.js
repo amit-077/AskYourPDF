@@ -3,12 +3,12 @@ import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBBlwYbSoiJeMyEiRIONPqkgfrMsrSZBjM",
-  authDomain: "docchat-ba6c2.firebaseapp.com",
+  apiKey: "",
+  authDomain: "",
   projectId: "docchat-ba6c2",
   storageBucket: "docchat-ba6c2.appspot.com",
   messagingSenderId: "174389331764",
-  appId: "1:174389331764:web:2782fb9e59e78c31350761",
+  appId: "",
   measurementId: "G-2NPPGTHYM6",
 };
 
