@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Metadata } from "next";
+import { ChakraProvider } from "@chakra-ui/react";
+import { UserProvider } from "./context/context";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +14,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <script
+          src="https://kit.fontawesome.com/7911e70227.js"
+          crossOrigin="anonymous"
+        ></script>
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dizoqzvu3/image/upload/v1720371044/epwpnhqebyr4kbv9y2vc.png" type="image/x-icon" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Aladin&display=swap"
+          rel="stylesheet"
+        ></link>
+      </head>
+      <title>AskYourPDF</title>
+      <body style={{ overflow: "hidden", fontFamily: "Rubik" }}>
+        <UserProvider>
+          <ChakraProvider>{children}</ChakraProvider>
+        </UserProvider>
+      </body>
     </html>
   );
 }
